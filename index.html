@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./reviews.json"></script>
+    <script defer src="./main.js" type="module"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Filter reviews</h1>
+    <div>
+      <form action="./main.js">
+        <label for="Order by rating" class="orderRating"
+          >Order by rating:</label
+        >
+        <select name="reviews" id="reviews">
+          <option value="High">Highest First</option>
+          <option value="Low">Lowest First</option>
+        </select>
+        <br /><br />
+      </form>
+
+      <form action="./main.js">
+        <label for="rating" class="minRating">Minimum rating:</label>
+        <select name="rating" id="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <br /><br />
+      </form>
+
+      <form action="./main.js">
+        <label for="data" class="orderDate">Order by date:</label>
+        <select name="data" id="data">
+          <option value="Old">Oldest First</option>
+          <option value="New">Newer First</option>
+        </select>
+        <br /><br />
+      </form>
+
+      <form action="./main.js">
+        <label for="text" class="byText">Prioritize by text :</label>
+        <select name="text" id="text">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <br /><br />
+      </form>
+      <input type="submit" value="Submit" class="submit" id="submit" />
+    </div>
+    <h1>Results:</h1>
+    <div class="results"></div>
+  </body>
+</html>
